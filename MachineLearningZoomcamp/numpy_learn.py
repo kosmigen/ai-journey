@@ -90,3 +90,29 @@ a = np.array([
 a = np.where(a > 3, 10, 0)
 
 print(a)
+
+a = np.array([1, 2, 3])
+
+b = np.array([4, 5, 9])
+
+# np 中将两个向量相乘，是对应元素相乘组合的数组，和线代中的概念并不相同
+print(a * b)
+
+# 得到一个单位矩阵 I
+print(np.eye(4))
+
+V = np.array([[1, 2, 3],
+              [4, 5, 6],
+              [7, 8, 10],
+              [2, 4, 1]])
+
+Vs = V[:3, :]  # 取前3行
+print("原始矩阵 Vs:\n", Vs)
+
+# 求逆
+Vs_inv = np.linalg.inv(Vs)
+print("\n逆矩阵:\n", Vs_inv)
+
+# 验证：逆矩阵乘以原矩阵 = 单位矩阵（近似）
+print("\n验证结果（应该接近单位矩阵）:\n", Vs_inv.dot(Vs))
+
