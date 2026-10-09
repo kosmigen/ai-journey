@@ -1,0 +1,11 @@
+[project]
+name = "ai-journey"
+version = "0.1.0"
+description = "AI 学习的过程化记录项目"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jupyter>=1.1.1",
+    "numpy>=2.5.2",
+    "pandas>=3.0.5",
+]
